@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211202 11:58:07.823" rpa="false" schemaversion="2">
+<suite id="s1" name="Amazon" source="E:\Interview_Prep\Robot_Framework\Practice\first_script_final\Tests\Amazon.robot">
+<test id="s1-t1" name="User must sign in to check out">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211202 11:58:08.176" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in'.</msg>
+<status status="PASS" starttime="20211202 11:58:08.175" endtime="20211202 11:58:11.958"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Mobiles</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211202 11:58:11.959" endtime="20211202 11:58:12.020"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>iPhone 11</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211202 11:58:12.021" level="INFO">Typing text 'iPhone 11' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20211202 11:58:12.020" endtime="20211202 11:58:12.444"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[3]/div/span/input</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211202 11:58:12.445" level="INFO">Clicking button 'xpath=/html/body/div[1]/header/div/div[1]/div[2]/div/form/div[3]/div/span/input'.</msg>
+<status status="PASS" starttime="20211202 11:58:12.445" endtime="20211202 11:58:14.921"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>results for "iPhone 11"</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211202 11:58:14.922" endtime="20211202 11:58:14.990"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath=/html/body/div[1]/div[2]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/span/div/div/div[2]/div[2]/div/div/div[1]/h2/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20211202 11:58:14.991" level="INFO">Clicking link 'xpath=/html/body/div[1]/div[2]/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/span/div/div/div[2]/div[2]/div/div/div[1]/h2/a'.</msg>
+<status status="PASS" starttime="20211202 11:58:14.991" endtime="20211202 11:58:15.232"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>iPhone</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211202 11:58:15.233" endtime="20211202 11:58:15.284"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=add-to-cart-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211202 11:58:15.289" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211202 11:58:15.566" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211202 11:58:15.315" endtime="20211202 11:58:15.567"/>
+</kw>
+<msg timestamp="20211202 11:58:15.575" level="FAIL">Button with locator 'id=add-to-cart-button' not found.</msg>
+<status status="FAIL" starttime="20211202 11:58:15.288" endtime="20211202 11:58:15.575"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20211202 11:58:15.576" endtime="20211202 11:58:15.577"/>
+</kw>
+<doc>This is some basic info about the test</doc>
+<tag>Smoke</tag>
+<status status="FAIL" starttime="20211202 11:58:08.174" endtime="20211202 11:58:15.579">Button with locator 'id=add-to-cart-button' not found.</status>
+</test>
+<doc>This is some basic info about the whole suite</doc>
+<status status="FAIL" starttime="20211202 11:58:07.826" endtime="20211202 11:58:15.584"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Smoke</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
